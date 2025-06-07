@@ -2,8 +2,12 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
+        var reference = new ScriptureReference("John", 3, 16);
+        var text = "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.";
+
+        var memorizer = new ScriptureMemorizer(reference, text);
+        memorizer.Start();
     }
 }
